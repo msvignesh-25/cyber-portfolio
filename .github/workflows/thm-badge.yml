@@ -1,5 +1,6 @@
 name: Update TryHackMe Badge
 
+# Run manually or on schedule
 on:
   workflow_dispatch:
   schedule:
@@ -22,15 +23,17 @@ jobs:
       # Step 3: Commit and push using PAT
       - name: Push changes
         env:
-          PERSONAL_TOKEN: ${{ secrets.ACTIONS_DEPLOY_TOKEN }}  # your PAT secret
+          PERSONAL_TOKEN: ${{ secrets.ACTIONS_DEPLOY_TOKEN }}  # Your PAT secret
         run: |
+          # Configure Git
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
+          # Stage badge
           git add assets/thm-badge.png
 
-          # Commit only if there are changes
+          # Commit only if changed
           git diff --quiet && git diff --staged --quiet || git commit -m "Update TryHackMe badge"
 
-          # Push using PAT directly in URL
+          # Push to main branch using PAT
           git push https://x-access-token:${{ secrets.ACTIONS_DEPLOY_TOKEN }}@github.com/msvignesh-25/cyber-portfolio.git HEAD:main
