@@ -1,6 +1,5 @@
 name: Update TryHackMe Badge
 
-# Run manually or on a schedule
 on:
   workflow_dispatch:
   schedule:
@@ -11,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout your repo
+      # Step 1: Checkout repo
       - name: Checkout repository
         uses: actions/checkout@v3
 
@@ -21,22 +20,17 @@ jobs:
           curl -o assets/thm-badge.png https://tryhackme-badges.s3.amazonaws.com/VigneshXploit.png
 
       # Step 3: Commit and push using PAT
-      - name: Commit and push badge if changed
+      - name: Push changes
         env:
-          TOKEN: ${{ secrets.ACTIONS_DEPLOY_TOKEN }}   # your PAT secret
+          PERSONAL_TOKEN: ${{ secrets.ACTIONS_DEPLOY_TOKEN }}  # your PAT secret
         run: |
-          # Configure git
           git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Set remote to use PAT
-          git remote set-url origin https://${TOKEN}@github.com/${{ github.repository }}.git
-
-          # Stage changes
           git add assets/thm-badge.png
 
           # Commit only if there are changes
-          git diff --quiet && git diff --staged --quiet || git commit -m "Updated TryHackMe badge"
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update TryHackMe badge"
 
-          # Push changes to main branch
-          git push
+          # Push using PAT directly in URL
+          git push https://x-access-token:${{ secrets.ACTIONS_DEPLOY_TOKEN }}@github.com/msvignesh-25/cyber-portfolio.git HEAD:main
