@@ -1,39 +1,31 @@
 name: Update TryHackMe Badge
 
-# Run manually or on schedule
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */12 * * *"  # every 12 hours
+    - cron: "0 */12 * * *"
 
 jobs:
   update-badge:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout repo
-      - name: Checkout repository
+      - name: Checkout repo
         uses: actions/checkout@v3
 
-      # Step 2: Download TryHackMe badge
       - name: Download TryHackMe badge
         run: |
-          curl -o assets/thm-badge.png https://tryhackme-badges.s3.amazonaws.com/VigneshXploit.png
+          mkdir -p assets
+          curl -L -o assets/thm-badge.png https://tryhackme-badges.s3.amazonaws.com/VigneshXploit.png
 
-      # Step 3: Commit and push using PAT
-      - name: Push changes
+      - name: Commit and push badge if changed
         env:
-          PERSONAL_TOKEN: ${{ secrets.ACTIONS_DEPLOY_TOKEN }}  # Your PAT secret
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Configure Git
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
 
-          # Stage badge
           git add assets/thm-badge.png
+          git diff --quiet && git diff --staged --quiet || git commit -m "Updated TryHackMe badge"
 
-          # Commit only if changed
-          git diff --quiet && git diff --staged --quiet || git commit -m "Update TryHackMe badge"
-
-          # Push to main branch using PAT
-          git push https://x-access-token:${{ secrets.ACTIONS_DEPLOY_TOKEN }}@github.com/msvignesh-25/cyber-portfolio.git HEAD:main
+          git push https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.git HEAD:${{ github.ref }}
