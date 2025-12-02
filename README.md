@@ -6,7 +6,7 @@ A clean, minimal, and professional space to showcase my cybersecurity journey �
 
 ## 🛡️ TryHackMe Progress
 
-[![TryHackMe Badge](https://tryhackme-badges.s3.amazonaws.com/4241178.png)](https://tryhackme.com/p/VigneshXploit)
+[![TryHackMe Badge](https://tryhackme-badges.s3.amazonaws.com/VigneshXploit.png)](https://tryhackme.com/p/VigneshXploit)
 
 ---
 
