@@ -6,14 +6,14 @@ A clean, minimal, and professional space to showcase my cybersecurity journey �
 
 ## 🛡️ TryHackMe Progress
 
-[![TryHackMe Badge](https://tryhackme-badges.s3.amazonaws.com/VigneshXploit.png)](https://tryhackme.com/p/VigneshXploit)
+![TryHackMe Badge](https://raw.githubusercontent.com/msvignesh-25/cyber-portfolio/main/assets/thm-badge.png)
 
 ---
 
 ## 📚 CTF Writeups
 
-- **PicoCTF Writeups** → https://github.com/msvignesh-25/picoctf-writeups  
-- **OverTheWire Writeups** → https://github.com/msvignesh-25/overthewire-writeups  
+- **PicoCTF Writeups** → [https://github.com/msvignesh-25/picoctf-writeups](https://github.com/msvignesh-25/picoctf-writeups)  
+- **OverTheWire Writeups** → [https://github.com/msvignesh-25/overthewire-writeups](https://github.com/msvignesh-25/overthewire-writeups)  
 
 ---
 
@@ -30,7 +30,7 @@ A clean, minimal, and professional space to showcase my cybersecurity journey �
 
 ## 🔥 Areas of Focus
 
-- Networking basics → OSI, TCP/IP, routing, protocols  
+- Networking basics → OSI, TCP/IP, routing, protocol  
 - Linux privilege escalation & system internals  
 - Web application security concepts  
 - Red teaming fundamentals  
