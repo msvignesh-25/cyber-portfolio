@@ -1,28 +1,22 @@
 name: Update TryHackMe Badge
+
 on:
-  workflow_dispatch:
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: '0 0 * * *'    # Runs every day at midnight
+  workflow_dispatch:        # Allows manual triggering
 
 jobs:
   update-badge:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      
-      - name: Download THM Badge Directly
-        run: |
-          mkdir -p assets
-          curl -L "https://tryhackme.com/api/v2/badges/public-profile?userPublicId=4241178" \
-            -H "User-Agent: Mozilla/5.0" \
-            -o assets/thm-badge.svg
-      
-      - name: Commit changes
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add assets/thm-badge.svg
-          if ! git diff --staged --quiet; then
-            git commit -m "Update THM badge [skip ci]"
-            git push
-          fi
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch TryHackMe Badge
+        uses: DhanushNehru/tryhackme-badge-action-workflow@v1.1
+        with:
+          image_path: './assets/tryhackme-badge.png'
+          username: 'VigneshXploit'
+          user_id: '4241178'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
