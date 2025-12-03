@@ -6,7 +6,7 @@ A clean, minimal, and professional space to showcase my cybersecurity journey �
 
 ## 🛡️ TryHackMe Progress
 
-<img src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=4241178" alt="TryHackMe Badge" width="400">
+[TryHackMe](https://tryhackme.com/p/VigneshXploit)
 
 ---
 
