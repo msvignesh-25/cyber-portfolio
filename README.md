@@ -6,7 +6,7 @@ A clean, minimal, and professional space to showcase my cybersecurity journey �
 
 ## 🛡️ TryHackMe Progress
 
-![TryHackMe Badge](https://raw.githubusercontent.com/msvignesh-25/cyber-portfolio/main/assets/thm-badge.svg)
+![TryHackMe Badge](https://raw.githubusercontent.com/msvignesh-25/cyber-portfolio/main/assets/tryhackme-badge.png)
 
 ---
 
@@ -30,7 +30,7 @@ A clean, minimal, and professional space to showcase my cybersecurity journey �
 
 ## 🔥 Areas of Focus
 
-- Networking basics → OSI, TCP/IP, routing, protocol  
+- Networking basics → OSI, TCP/IP, routing, protocols  
 - Linux privilege escalation & system internals  
 - Web application security concepts  
 - Red teaming fundamentals  
