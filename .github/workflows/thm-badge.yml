@@ -2,19 +2,22 @@ name: Update TryHackMe Badge
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */12 * * *"  # Every 12 hours (keep yours)
+    - cron: "0 */12 * * *"
 
 jobs:
   update-badge:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4  # Updated to v4
+        uses: actions/checkout@v4
+
+      - name: Create assets folder
+        run: mkdir -p assets
 
       - name: Download TryHackMe badge
         uses: p4p1/tryhackme-badge-workflow@main
         with:
-          username: "VigneshXploit"  # Your THM username
+          username: "VigneshXploit"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           image_path: "./assets/thm-badge.png"
 
@@ -22,10 +25,6 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add assets/thm-badge.png
-          if git diff --staged --quiet; then
-            echo "No changes"
-          else
-            git commit -m "Updated TryHackMe badge"
-            git push
-          fi
+          git add assets/thm-badge.png || echo "No badge file"
+          git diff --stashed --quiet || git commit -m "Updated TryHackMe badge [skip ci]" || echo "No changes to commit"
+          git push || echo "Nothing to push"
