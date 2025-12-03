@@ -6,7 +6,7 @@ A clean, minimal, and professional space to showcase my cybersecurity journey �
 
 ## 🛡️ TryHackMe Progress
 
-![TryHackMe Badge](https://raw.githubusercontent.com/msvignesh-25/cyber-portfolio/main/assets/thm-badge.png)
+![TryHackMe Badge](https://raw.githubusercontent.com/msvignesh-25/cyber-portfolio/main/assets/thm-badge.svg)
 
 ---
 
