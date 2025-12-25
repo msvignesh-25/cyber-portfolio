@@ -1,44 +1,68 @@
-# 🧩 Cyber Portfolio
+# Cybersecurity Portfolio – M S Vignesh
 
-A clean, minimal, and professional space to showcase my cybersecurity journey — including hands-on practice, platform progress, and structured learning in networking, Linux, and offensive security.
-
----
-
-## 🛡️ TryHackMe Progress
-
-[TryHackMe](https://tryhackme.com/p/VigneshXploit)
+This repository serves as a centralized index of my hands-on cybersecurity work.
+It focuses on building strong fundamentals required for offensive security and
+red teaming through practical labs, CTF challenges, and independent learning.
 
 ---
 
-## 📚 CTF Writeups
+## 🧪 Hands-On Work
 
-- **PicoCTF Writeups** → [https://github.com/msvignesh-25/picoctf-writeups](https://github.com/msvignesh-25/picoctf-writeups)  
-- **OverTheWire Writeups** → [https://github.com/msvignesh-25/overthewire-writeups](https://github.com/msvignesh-25/overthewire-writeups)  
+### 🔹 CTF Writeups
+- **picoCTF Writeups**  
+  Practical challenges covering binary exploitation, web vulnerabilities,
+  and cryptography with emphasis on understanding the underlying concepts.  
+  → https://github.com/msvignesh-25/picoctf-writeups
 
----
-
-## 🧭 What This Portfolio Contains
-
-- Dynamic badges from cybersecurity platforms  
-- Networking & Linux fundamentals  
-- Offensive security learning progress  
-- Notes, labs, and mini projects  
-- Career-focused and structured documentation  
-- Future certifications and achievement tracking  
+- **OverTheWire Writeups**  
+  Focused on Linux internals, permissions, command-line proficiency,
+  and foundational privilege escalation concepts.  
+  → https://github.com/msvignesh-25/overthewire-writeups
 
 ---
 
-## 🔥 Areas of Focus
-
-- Networking basics → OSI, TCP/IP, routing, protocols  
-- Linux privilege escalation & system internals  
-- Web application security concepts  
-- Red teaming fundamentals  
-- Challenge-based learning (CTFs)  
-- Python scripting for automation  
+## Areas of Focus
+- Networking fundamentals (OSI, TCP/IP, routing, protocols)
+- Linux system internals and privilege escalation concepts
+- Web application security (learning phase)
+- Offensive security fundamentals and attacker mindset
+- Challenge-based learning through CTFs
+- Python scripting for basic automation
 
 ---
 
-## 📌 Intent
+## 🛠️ Tools & Technologies
+- Linux (command line)
+- Bash
+- Python
+- Git & GitHub
+- GDB (introductory usage)
+- Burp Suite (learning phase)
 
-This repository acts as a single, organized hub that reflects my progress as I grow towards red teaming and cybersecurity roles — without mixing content inside my CTF writeup repositories.
+---
+
+## Learning Approach
+- Focuses on understanding root causes rather than memorizing solutions
+- Avoids copy-paste walkthrough-based learning
+- Documents reasoning and lessons learned during problem solving
+- Emphasizes consistency and long-term skill development
+
+---
+
+## 🧭 Learning Roadmap (Current)
+
+The following roadmap reflects my near-term learning priorities and is updated
+as I progress.
+
+- Strengthen networking fundamentals from a security perspective
+- Improve web exploitation methodology through hands-on challenges
+- Develop a deeper understanding of Linux privilege escalation
+- Begin structured practice in binary exploitation concepts
+- Build small Python scripts to automate repetitive security tasks
+
+---
+
+## 📌 Purpose
+This repository acts as a single, organized entry point to my cybersecurity work,
+without mixing raw notes or writeups inside this index. Each linked repository
+contains focused, hands-on practice aligned with my learning goals.
