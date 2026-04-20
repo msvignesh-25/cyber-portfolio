@@ -38,14 +38,7 @@ red teaming through practical labs, CTF challenges, and independent learning.
 - Git & GitHub
 - GDB (introductory usage)
 - Burp Suite (learning phase)
-
----
-
-## Learning Approach
-- Focuses on understanding root causes rather than memorizing solutions
-- Avoids copy-paste walkthrough-based learning
-- Documents reasoning and lessons learned during problem solving
-- Emphasizes consistency and long-term skill development
+- Wireshark (learning)
 
 ---
 
